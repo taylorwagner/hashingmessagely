@@ -17,6 +17,13 @@ const router = new Router();
  *
  **/
 
+router.get("/:id", ensureLoggedIn, async (req, res, next) => {
+    try {
+
+    } catch(e) {
+        return next(e);
+    }
+});
 
 /** POST / - post message.
  *
@@ -25,6 +32,13 @@ const router = new Router();
  *
  **/
 
+router.post("/", ensureLoggedIn, async (req, res, next) => {
+    try {
+
+    } catch(e) {
+        return next(e);
+    }
+});
 
 /** POST/:id/read - mark message as read:
  *
@@ -34,5 +48,12 @@ const router = new Router();
  *
  **/
 
+router.post("/:id/read", ensureLoggedIn, async (req, res, next) => {
+    try {
+
+    } catch(e) {
+        return next(e);
+    }
+});
 
 module.exports = router;
